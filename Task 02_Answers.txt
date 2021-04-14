@@ -1,0 +1,35 @@
+2. Difference between copy by value and copy by reference are:
+
+i). In copy by value, the values of one variable is copied to another.
+Whereas in copy by reference, the address of one variable is copied to another.
+
+ii). In copy by value, deleting or updating the one variable later doesn't effect the other variable.
+Whereas, in copy by reference, updating the copied variable will also update the original variable as they both contain the same address.
+
+iii). In copy by value, the original variable has no relation with the copied variable as any changes made to the copied variable doesn't effect the original one.
+But in copy by reference, there is a relation between the copied and the original variable as they both contain the same address.
+
+iv). Different data types used in copy by values are Boolean, null, undefined, String and Number. Also called as primitive data types.
+Different data types used in copy references are Array, Function and Object. Also called as objects or composite data types.
+
+v). Examples:
+
+Copy by value:
+
+let a = 10;
+let b = a;
+
+Copy by reference:
+
+let arr = [0];
+let guvi = arr;
+
+3. A spread operator can be used in a composite data type to copy by value.
+
+Example:
+
+let a = [10,20,30];
+let b = [...a];
+
+In the above example, the values 10, 20 and 30 are copied from array "a" to the array "b" and not it's address.
+Therefore, any changes made to "a" later won't make any effect "b".
